@@ -41,7 +41,7 @@ function TimelineComp(props) {
                         key={i}
                         dateText={formatDate(repo.created_at)}
                         style={{ color: '#e86971' }}>
-                        <h3>{repo.name}</h3>
+                        <h3><a href={repo.html_url} target="_blank">{repo.name}</a></h3>
                         <h4>{repo.description}</h4>
                     </TimelineItem>)
                 }) : ""}
