@@ -17,6 +17,7 @@ Reposlib is the web project that allows you to get your Github repositories time
  - Get image of timeline
  - Share timeline on Facebook, Twitter and email.
  - Download timeline as a image.
+ - Add checkbox or control for just source repositories, forked or all of them.
 
 ## *Contributions*
 Contributions and suggestions are very welcome and wanted. I try to respond to pull requests within 48 hours. For more information see [CONTRIBUTING.md](https://github.com/okandavut/Reposlib/blob/master/CONTRIBUTING.md).
