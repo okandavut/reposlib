@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { hot } from 'react-hot-loader/root';
-import Timeline from 'react-time-line';
+import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 function formatDate(date) {
     var d = new Date(date),
         month = '' + (d.getMonth() + 1),
@@ -19,27 +19,33 @@ function TimelineComp(props) {
     const [repositories, setRepositories] = useState();
     const events = [];
     useEffect(() => {
+        
         async function getUserRepositories(username) {
-            let response = await fetch('https://api.github.com/users/okandavut/repos?sort=created&direction=desc')
+            let response = await fetch(`https://api.github.com/users/${username}/repos?sort=created&direction=desc`)
             response = await response.json()
             if (response.message != "Not Found") {
                 setRepositories(response)
             }
             else {
-                alert("No repo found!");
+                console.log("No repo found!");
             }
         }
         getUserRepositories(props.username);
-    }, []);
+    }, [props.username]);
 
     return (
         <>
-            <h1>Welcome timeline</h1>
-            {repositories != undefined ? repositories.map((repo, i) => {
-                events.push({ "ts": repo.created_at, "text": repo.name });
-                // return (<p key={i}>{`Repo adı : ${repo.name} ve Repo oluşturulma tarihi :  ${formatDate(repo.created_at)}`} </p>)
-            }) : "No repo found!"}
-            {repositories != undefined ? <Timeline items={events} /> : ""}
+            <Timeline lineColor={repositories!= undefined ? '#ddd' : 'white'}  >
+                {repositories != undefined ? repositories.map((repo, i) => {
+                    return (<TimelineItem
+                        key={i}
+                        dateText={formatDate(repo.created_at)}
+                        style={{ color: '#e86971' }}>
+                        <h3>{repo.name}</h3>
+                        <h4>{repo.description}</h4>
+                    </TimelineItem>)
+                }) : ""}
+            </Timeline>
         </>
     );
 }
