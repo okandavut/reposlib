@@ -4,7 +4,8 @@
   "description": "Simplest React Hooks Boilerplate",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --hot",
+    "start": "node server.js",
+    "work": "cross-env NODE_ENV=development webpack-dev-server --hot",
     "build": "cross-env NODE_ENV=production webpack",
     "lint": "eslint ./src"
   },
