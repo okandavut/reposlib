@@ -25,8 +25,6 @@ Reposlib is the web project that allows you to get your Github repositories time
 ## *Contributions*
 Contributions and suggestions are very welcome and wanted. I try to respond to pull requests within 48 hours. For more information see [CONTRIBUTING.md](https://github.com/okandavut/Reposlib/blob/master/CONTRIBUTING.md).
 
-## *Contributors ✨*
-
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
