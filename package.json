@@ -1,0 +1,55 @@
+{
+  "name": "git-repositories-timeline",
+  "version": "1.0.0",
+  "description": "Git Repositories Timeline",
+  "license": "",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/okandavut/git-repositories-timeline.git"
+  },
+  "homepage": "",
+  "bugs": {
+    "url": "https://github.com/okandavut/git-repositories-timeline/issues"
+  },
+  "author": {
+    "name": "Okan DAVUT",
+    "url": "https://github.com/okandavut"
+  },
+  "keywords": [
+    "app",
+    "ES6",
+    "ES7",
+    "react",
+    "react-router",
+    "reactjs",
+    "styled-components",
+    "web app",
+    "Webpack"
+  ],
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0",
+    "yarn": ">=1.0.0"
+  },
+  "main": "src/app.tsx",
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  },
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts-ts": "3.1.0",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.5",
+    "@types/react": "16.9.2",
+    "@types/react-dom": "16.9.0",
+    "typescript": "^3.6.3"
+  }
+}
