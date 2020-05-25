@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { hot } from 'react-hot-loader/root';
-import Timeline from './timeline';
+import TimelineComp from './timeline';
 
 
 function Search() {
   
   return (
-    <Timeline username="okandavut"/>
+    <TimelineComp username="okandavut"/>
   );
 }
 
