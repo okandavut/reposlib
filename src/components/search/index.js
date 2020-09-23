@@ -19,18 +19,17 @@ function Search() {
 
   const enterPressed = (event) => {
     setApiLimitError("");
-    var code = event.keyCode || event.which;
+
+    let code = event.keyCode || event.which;
+
     if (code === 13 || event.button == 0) {
       if (username) {
         async function getRepositories() {
-          let response = await getUserRepositories(username);
-          if (!response.message) {
-            setRepositories(response);
-          } else {
-            setApiLimitError(
-              response.message ? response.message : "No Repo Found"
-            );
-          }
+          let repositoriesResponse = await getUserRepositories(username);
+
+          !repositoriesResponse.message
+            ? setRepositories(repositoriesResponse)
+            : setApiLimitError(repositoriesResponse.message);
         }
         getRepositories();
       } else setRepositories(undefined);
@@ -49,7 +48,11 @@ function Search() {
         value={username}
         onKeyPress={enterPressed.bind(this)}
       />
-      <Button type="button" onClick={enterPressed.bind(this)} style={{ marginLeft: "3px"}}>
+      <Button
+        type="button"
+        onClick={enterPressed.bind(this)}
+        className="search-button"
+      >
         Search
       </Button>
     </InputGroup>

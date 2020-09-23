@@ -8,14 +8,14 @@ import formatDate from "../../utility/dateFormatter";
 
 function RepoTimeline(props) {
   const events = [];
-
+  const error = props.apiLimitError != "" ? `${props.apiLimitError}` : "";
   return (
     <>
       <center>
-        <p>{props.apiLimitError != "" ? `${props.apiLimitError}` : ""}</p>
+        <p>{error}</p>
       </center>
       <VerticalTimeline>
-        {props.repositories != undefined
+        {props.repositories
           ? props.repositories.map((repo, i) => {
               return (
                 <VerticalTimelineElement
@@ -39,15 +39,13 @@ function RepoTimeline(props) {
                     <a
                       href={repo.html_url}
                       target="_blank"
-                      style={{ textDecoration: "none", color: "white" }}
+                      className="repo-text"
                     >
                       {repo.name}
                     </a>
                   </h3>
                   <h4 className="vertical-timeline-element-subtitle"></h4>
-                  <p style={{ textDecoration: "none", color: "white" }}>
-                    {repo.description}
-                  </p>
+                  <p className="repo-text">{repo.description}</p>
                 </VerticalTimelineElement>
               );
             })
