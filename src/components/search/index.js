@@ -24,7 +24,6 @@ function Search() {
       if (username) {
         async function getRepositories() {
           let response = await getUserRepositories(username);
-          console.log(response);
           if (!response.message) {
             setRepositories(response);
           } else {
