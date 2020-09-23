@@ -49,7 +49,7 @@ function Search() {
         value={username}
         onKeyPress={enterPressed.bind(this)}
       />
-      <Button type="button" onClick={enterPressed.bind(this)}>
+      <Button type="button" onClick={enterPressed.bind(this)} style={{ marginLeft: "3px"}}>
         Search
       </Button>
     </InputGroup>
