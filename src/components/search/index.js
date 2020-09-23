@@ -24,6 +24,7 @@ function Search() {
       if (username) {
         async function getRepositories() {
           let response = await getUserRepositories(username);
+          console.log(response);
           if (!response.message) {
             setRepositories(response);
           } else {
@@ -60,7 +61,7 @@ function Search() {
       <Container style={{ marginTop: "80px" }}>
         <Row>
           <Col>
-            <h3>Github Repository Timeline</h3>
+            <h2>Github Repository Timeline</h2>
           </Col>
         </Row>
         <Row>
@@ -73,7 +74,7 @@ function Search() {
                 Check on Github
               </a>
             </p>
-            <p>Press Enter when you enter Github Username</p>
+            <br />
           </Col>
         </Row>
         <Row>

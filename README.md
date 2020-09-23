@@ -8,7 +8,6 @@
 
 Reposlib is the web project that allows you to get your Github repositories timeline. You can see the list of repositories on Github sorted by dates of projects.
 
-![](/project.gif)
 
 ## *Features*
 
@@ -26,7 +25,7 @@ Reposlib is the web project that allows you to get your Github repositories time
  
 ## *Credits*
 
-Vertical aligned timeline npm package [vertical-timeline-component-for-react](https://www.npmjs.com/package/vertical-timeline-component-for-react) 
+react-vertical-timeline-component - Vertical timeline for React.js [react-vertical-timeline-component](https://www.npmjs.com/package/react-vertical-timeline-component) 
     
 
 
