@@ -10,10 +10,11 @@ import {
   Button,
 } from "react-bootstrap";
 import getUserRepositories from "../../api/";
+import Link from 'next/link'
+
 
 function Search() {
   const [username, setUsername] = useState("");
-  const [refresh, setRefresh] = useState("");
   const [repositories, setRepositories] = useState();
   const [apiLimitError, setApiLimitError] = useState("");
 
@@ -81,6 +82,14 @@ function Search() {
         </Row>
         <Row>
           <Col>{styledInput}</Col>
+        </Row>
+        <Row style={{display: repositories ? 'block' : 'none' }}
+>
+          <Col>
+            <Link href={"/" + username}>
+              <a target="_blank">Get your personal Link</a>
+            </Link>
+          </Col>
         </Row>
       </Container>
 

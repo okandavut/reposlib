@@ -19,6 +19,7 @@ function RepoTimeline(props) {
           ? props.repositories.map((repo, i) => {
               return (
                 <VerticalTimelineElement
+                key={i}
                   className="vertical-timeline-element--work"
                   contentStyle={{
                     background: "rgb(33, 150, 243)",
