@@ -6,3 +6,7 @@
 .search-button {
   margin-left: 3px;
 }
+
+.vertical-timeline.vertical-timeline--animate.vertical-timeline--two-columns::before {
+  background: #e3e3e3 !important;
+}
