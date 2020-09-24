@@ -48,7 +48,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://medium.com/@okandavut"><img src="https://avatars3.githubusercontent.com/u/10600157?v=4" width="100px;" alt=""/><br /><sub><b>Okan DAVUT</b></sub></a><br /><a href="#infra-okandavut" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/okandavut/Reposlib/commits?author=okandavut" title="Tests">⚠️</a> <a href="https://github.com/okandavut/Reposlib/commits?author=okandavut" title="Code">💻</a></td>
-      <td align="center"><a href="anilsenay.com"><img src="https://avatars2.githubusercontent.com/u/1047345?s=460&u=bafc13c81eda52d42776944b60074f6d5584fd37&v=4" width="100px;" alt=""/><br /><sub><b>Anıl Şenay</b></sub></a><br /><a href="https://github.com/okandavut/Reposlib/commits?author=anilsenay" title="Code">💻</a></td>
+      <td align="center"><a href="https://anilsenay.com"><img src="https://avatars2.githubusercontent.com/u/1047345?s=460&u=bafc13c81eda52d42776944b60074f6d5584fd37&v=4" width="100px;" alt=""/><br /><sub><b>Anıl Şenay</b></sub></a><br /><a href="https://github.com/okandavut/Reposlib/commits?author=anilsenay" title="Code">💻</a></td>
   </tr>
 </table>
 
