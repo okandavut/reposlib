@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import formatDate from "../../utility/dateFormatter";
-import CodeIcon from '@material-ui/icons/Code';
+import CodeIcon from "@material-ui/icons/Code";
+import CallSplitIcon from "@material-ui/icons/CallSplit";
 
 function RepoTimeline(props) {
   const events = [];
@@ -30,10 +31,10 @@ function RepoTimeline(props) {
                   }}
                   date={formatDate(repo.created_at)}
                   iconStyle={{
-                    background: "#10CC52",
+                    background: repo.fork ? "#810ED0" : "#10CC52",
                     color: "#fff",
                   }}
-                  icon={<CodeIcon />}
+                  icon={repo.fork ? <CallSplitIcon /> : <CodeIcon />}
                 >
                   <h3 className="vertical-timeline-element-title">
                     <a
