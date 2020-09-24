@@ -5,9 +5,6 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/okandavut/reposlib)
-
-
 
 Reposlib is the web project that allows you to get your Github repositories timeline. You can see the list of repositories on Github sorted by dates of projects.
 
