@@ -3,8 +3,8 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { Icon } from "semantic-ui-react";
 import formatDate from "../../utility/dateFormatter";
+import CodeIcon from '@material-ui/icons/Code';
 
 function RepoTimeline(props) {
   const events = [];
@@ -19,7 +19,7 @@ function RepoTimeline(props) {
           ? props.repositories.map((repo, i) => {
               return (
                 <VerticalTimelineElement
-                key={i}
+                  key={i}
                   className="vertical-timeline-element--work"
                   contentStyle={{
                     background: "rgb(33, 150, 243)",
@@ -32,9 +32,8 @@ function RepoTimeline(props) {
                   iconStyle={{
                     background: "#10CC52",
                     color: "#fff",
-                    padding: "16px 0px 0px 12px",
                   }}
-                  icon={<Icon name="code" size="big" />}
+                  icon={<CodeIcon />}
                 >
                   <h3 className="vertical-timeline-element-title">
                     <a
