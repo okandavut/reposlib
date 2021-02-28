@@ -9,14 +9,18 @@ import {
   Col,
   Button,
 } from "react-bootstrap";
-import getUserRepositories from "../../api/";
-import Link from 'next/link'
+import { TwitterShareButton, TwitterIcon } from "react-share";
 
+import getUserRepositories from "../../api/";
+import Link from "next/link";
 
 function Search() {
+  const title = "Checkout my Github repository timeline";
+
   const [username, setUsername] = useState("");
   const [repositories, setRepositories] = useState();
   const [apiLimitError, setApiLimitError] = useState("");
+  const [shareUrl, setShareUrl] = useState("");
 
   const enterPressed = (event) => {
     setApiLimitError("");
@@ -36,6 +40,10 @@ function Search() {
       } else setRepositories(undefined);
     }
   };
+
+  useEffect(() => {
+    setShareUrl("https://reposlib.vercel.app/" + username);
+  }, [username]);
 
   const styledInput = (
     <InputGroup className="mb-3">
@@ -83,12 +91,26 @@ function Search() {
         <Row>
           <Col>{styledInput}</Col>
         </Row>
-        <Row style={{display: repositories ? 'block' : 'none' }}
->
+        <Row style={{ display: repositories ? "block" : "none" , marginLeft:"0px"}}>
           <Col>
-            <Link href={"/" + username}>
-              <a target="_blank">Get your personal Link</a>
+          <Row>
+            <TwitterShareButton
+              url={shareUrl}
+              title={title}
+              hashtags={[
+                "GithubRepositoryTimeline",
+                "Github",
+                "RepositoryLink",
+                "Timeline",
+              ]}
+              className="Demo__some-network__share-button"
+            >
+              <TwitterIcon size={32} round />
+            </TwitterShareButton>
+            <Link href={"/" + username} >
+              <a target="_blank" style={{marginLeft:"15px", marginTop:"5px"}}>Get your personal Link</a>
             </Link>
+            </Row>
           </Col>
         </Row>
       </Container>
